@@ -4,7 +4,6 @@ from datetime import date, datetime
 CWD = os.getcwd()
 
 def downloadImage(url: str, output: str, file_name):
-  #fileName = url.replace("https://oss.gtarcade.com/ucms/","").replace("?x-oss-process=image/interlace,1/format,webp,image/resize,m_fill,w_520,h_300","").replace("?x-oss-process=image/interlace,1/format,webp,image/resize,m_fill,w_520,h_300","")
   res = requests.get(url)
   if res.status_code != 200:
       print("ERROR: Could not download", url) 
